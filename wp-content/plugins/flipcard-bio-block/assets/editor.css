@@ -1,0 +1,163 @@
+/* ========================================
+   Flipcard Bio Block - Estilos Editor
+   ======================================== */
+
+.flipcard-editor-wrap {
+    width: 100%;
+}
+
+.flipcard-editor-preview {
+    width: 100%;
+    max-width: 340px;
+    margin: 1rem auto;
+}
+
+/* Caras en el editor (posición relativa, no absoluta) */
+.flipcard-editor-preview .flipcard-face {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+/* El reverso en el editor no se voltea */
+.flipcard-editor-preview .flipcard-back {
+    transform: none;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+/* Avatar */
+.flipcard-editor-preview .flipcard-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.15);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 0 6px rgba(41,87,238,0.12);
+}
+
+.flipcard-editor-preview .flipcard-avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+/* Nombre */
+.flipcard-editor-preview .flipcard-name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0 0 0.4rem 0;
+    text-align: center;
+}
+
+/* Cargo */
+.flipcard-editor-preview .flipcard-role {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+/* Hint */
+.flipcard-editor-preview .flipcard-hint {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+}
+
+/* Nombre reverso */
+.flipcard-editor-preview .flipcard-back-name {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+/* Cargo reverso */
+.flipcard-editor-preview .flipcard-back-role {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.45);
+    margin: 0.2rem 0 0 0;
+    text-align: center;
+}
+
+/* Divisor */
+.flipcard-editor-preview .flipcard-divider {
+    width: 50px;
+    height: 3px;
+    border-radius: 999px;
+    margin: 0.6rem auto;
+}
+
+/* Descripción */
+.flipcard-editor-preview .flipcard-desc {
+    color: rgba(255,255,255,0.82);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    text-align: center;
+    margin: 0;
+}
+
+/* Redes sociales */
+.flipcard-editor-preview .flipcard-social {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.flipcard-editor-preview .flipcard-social-link {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Override existing inline default colors from pink to blue in the editor */
+.flipcard-editor-wrap [style*="color: #e94560"],
+.flipcard-editor-wrap [style*="color:#e94560"] {
+    color: #2957ee !important;
+}
+.flipcard-editor-wrap [style*="background: #e94560"],
+.flipcard-editor-wrap [style*="background:#e94560"],
+.flipcard-editor-wrap [style*="background-color: #e94560"],
+.flipcard-editor-wrap [style*="background-color:#e94560"] {
+    background: #2957ee !important;
+}
+.flipcard-editor-wrap [style*="--accent: #e94560"],
+.flipcard-editor-wrap [style*="--accent:#e94560"] {
+    --accent: #2957ee !important;
+}

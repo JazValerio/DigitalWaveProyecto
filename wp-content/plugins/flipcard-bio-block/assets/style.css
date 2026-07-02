@@ -1,0 +1,262 @@
+/* ========================================
+   Flipcard Bio Block - Estilos Frontend
+   ======================================== */
+
+.flipcard-wrapper {
+   
+    width: 250px;
+    height: 300px;
+    max-width: 250px;
+    margin: 2rem auto;
+    cursor: pointer;
+}
+
+.flipcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flipcard-wrapper.is-flipped .flipcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flipcard-wrapper:hover {
+    transform: translateY(-6px);
+    transition: transform 0.3s ease;
+}
+
+/* Caras */
+.flipcard-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.flipcard-back {
+    transform: rotateY(180deg);
+    justify-content: space-evenly;
+}
+
+/* Avatar */
+.flipcard-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.15);
+    margin-bottom: 1.2rem;
+    box-shadow: 0 0 0 6px rgba(11, 30, 134, 0.12), 0 12px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flipcard-wrapper:hover .flipcard-avatar {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 8px rgba(41,87,238,0.2), 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.flipcard-avatar-placeholder {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+/* Nombre */
+.flipcard-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/* Cargo - pill */
+.flipcard-role {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+}
+
+/* Hint */
+.flipcard-hint {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    margin-top: 0.5rem;
+}
+
+/* Reverso - nombre y rol */
+.flipcard-back-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.flipcard-back-role {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.45);
+    margin: 0.3rem 0 0 0;
+    text-align: center;
+}
+
+/* Divisor */
+.flipcard-divider {
+    width: 50px;
+    height: 3px;
+    border-radius: 999px;
+    margin: 0.8rem auto;
+    opacity: 0.8;
+}
+
+/* Descripción */
+.flipcard-desc {
+    color: rgba(255,255,255,0.82);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    text-align: center;
+    margin: 0;
+    max-width: 260px;
+}
+
+/* Redes sociales */
+.flipcard-social {
+    display: flex;
+    gap: 0.9rem;
+    justify-content: center;
+}
+
+.flipcard-social-link {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flipcard-social-link:hover {
+    transform: translateY(-4px);
+    background: currentColor;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.flipcard-social-link:hover span {
+    color: #fff !important;
+}
+
+.flipcard-social-link span {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Botón */
+.flipcard-btn {
+    background: linear-gradient(135deg, var(--accent, #2957ee), color-mix(in srgb, var(--accent, #07268d) 70%, white));
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(11, 30, 134, 0.4);
+    font-family: inherit;
+    margin-top: 1.2rem;
+}
+
+.flipcard-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(11, 30, 134, 0.4);
+}
+
+.flipcard-btn:focus {
+    outline: 2px solid rgba(255,255,255,0.5);
+    outline-offset: 3px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .flipcard-wrapper {
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+
+    .flipcard-face {
+        padding: 1.5rem 1rem;
+        border-radius: 18px;
+    }
+
+    .flipcard-avatar {
+        width: 90px;
+        height: 90px;
+    }
+
+    .flipcard-name {
+        font-size: 1.3rem;
+    }
+
+    .flipcard-desc {
+        font-size: 0.85rem;
+    }
+
+    .flipcard-btn {
+        padding: 0.6rem 1.4rem;
+        font-size: 0.72rem;
+    }
+}
+
+/* Override existing inline default colors from pink to blue */
+.flipcard-wrapper [style*="color: #e94560"],
+.flipcard-wrapper [style*="color:#e94560"] {
+    color: #2957ee !important;
+}
+.flipcard-wrapper [style*="background: #e94560"],
+.flipcard-wrapper [style*="background:#e94560"],
+.flipcard-wrapper [style*="background-color: #e94560"],
+.flipcard-wrapper [style*="background-color:#e94560"] {
+    background: #2957ee !important;
+}
+.flipcard-wrapper [style*="--accent: #e94560"],
+.flipcard-wrapper [style*="--accent:#e94560"] {
+    --accent: #2957ee !important;
+}

@@ -1,0 +1,41 @@
+.dw-testimonios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dw-testimonio-card {
+    background: #fff;
+    padding: 2rem;
+    width: 320px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.dw-testimonio-texto {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.dw-testimonio-autor {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dw-testimonio-foto {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.dw-testimonio-nombre {
+    color: #4FA8D8;
+    font-weight: 600;
+}

@@ -1,0 +1,202 @@
+/* DigitalWave Fonts — paleta morado/teal */
+.dwf-container {
+    --dwf-purple: #6C3CE9;
+    --dwf-purple-dark: #4E24B0;
+    --dwf-teal: #14B8A6;
+    --dwf-teal-dark: #0E8074;
+    --dwf-bg: #F7F5FF;
+    --dwf-text: #221B3A;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: var(--dwf-bg);
+    border-radius: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--dwf-text);
+}
+
+.dwf-search-box {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+#dwf-search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--dwf-purple);
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#dwf-search-input:focus {
+    border-color: var(--dwf-teal);
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+#dwf-search-btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--dwf-purple), var(--dwf-teal));
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#dwf-search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(108, 60, 233, 0.35);
+}
+
+.dwf-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.dwf-filter-btn {
+    padding: 0.4rem 0.9rem;
+    border: 2px solid var(--dwf-purple);
+    background: #fff;
+    color: var(--dwf-purple-dark);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dwf-filter-btn:hover {
+    background: rgba(108, 60, 233, 0.08);
+}
+
+.dwf-filter-btn.active {
+    background: var(--dwf-purple);
+    color: #fff;
+}
+
+.dwf-preview-text-box {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.dwf-preview-text-box label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dwf-teal-dark);
+}
+
+#dwf-preview-text {
+    padding: 0.6rem 0.9rem;
+    border: 2px solid var(--dwf-teal);
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.dwf-loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--dwf-purple);
+    font-weight: 600;
+}
+
+.dwf-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.dwf-font-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem;
+    border: 1px solid rgba(108, 60, 233, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    animation: dwf-fade-in 0.35s ease;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.dwf-font-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(108, 60, 233, 0.18);
+}
+
+@keyframes dwf-fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dwf-font-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dwf-purple-dark);
+    margin-bottom: 0.25rem;
+}
+
+.dwf-font-category {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: rgba(20, 184, 166, 0.12);
+    color: var(--dwf-teal-dark);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+}
+
+.dwf-font-sample {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    padding: 0.75rem 0;
+    border-top: 1px dashed rgba(108, 60, 233, 0.25);
+    word-wrap: break-word;
+}
+
+.dwf-font-variants {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #766f8c;
+}
+
+.dwf-empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #766f8c;
+    grid-column: 1 / -1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .dwf-container {
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    .dwf-search-box {
+        flex-direction: column;
+    }
+    #dwf-search-btn {
+        width: 100%;
+    }
+    .dwf-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+    .dwf-font-sample {
+        font-size: 1.15rem;
+    }
+    .dwf-filter-btn {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.7rem;
+    }
+}
